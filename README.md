@@ -34,6 +34,26 @@ Fix light, color and sharpness while your photos stay on your PC.
 
 Pro subscriptions and license keys are handled by [Gumroad](https://prospertechnology.gumroad.com/l/facet-pro).
 
+## See Facet in action
+
+App screenshots using sample illustrations:
+
+### Before Auto Fix
+
+![Before Auto Fix](screenshots/1-before.png)
+
+### After Auto Fix
+
+![After Auto Fix](screenshots/2-auto-fix.png)
+
+### Background removal · Pro
+
+![Background removal · Pro](screenshots/3-remove-background.png)
+
+### Room to go further
+
+![Room to go further](screenshots/4-advanced-tools.png)
+
 ## Download & install
 
 Get the Windows installer from [the latest release](https://github.com/ProsperTechnology/facet/releases/latest). Facet supports **Windows 10 and Windows 11**. No account is needed for free editing.
