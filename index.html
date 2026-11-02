@@ -3,102 +3,57 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Facet: one-click photo fixes for Windows</title>
+  <title>Facet — Photo editing, beautifully simple | Prosper Technologies</title>
   <meta name="description" content="Fix light, color and sharpness in one click. Facet is a free photo editor for Windows that keeps your photos on your PC.">
+  <meta name="author" content="Prosper Technologies">
+  <meta name="theme-color" content="#141714">
+  <link rel="canonical" href="https://prospertechnology.github.io/facet/">
+  <meta property="og:title" content="Facet — Your photos. Their best light.">
+  <meta property="og:description" content="One-click photo fixes for Windows. Edit locally, keep your originals, and make something worth sharing.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://prospertechnology.github.io/facet/">
+  <meta property="og:image" content="https://prospertechnology.github.io/facet/facet-app.png">
   <link rel="icon" href="icon.png">
-  <style>
-    :root {
-      --bg: #17181b;
-      --surface: #212226;
-      --line: #36383e;
-      --text: #e7e7ea;
-      --muted: #a4a6ae;
-      --accent: #e8a13c;
-      --accent-hover: #f2b35a;
-      --accent-ink: #1c1405;
-    }
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    body {
-      margin: 0;
-      background: var(--bg);
-      color: var(--text);
-      font: 17px/1.55 "Segoe UI Variable Text", "Segoe UI", system-ui, sans-serif;
-    }
-    a { color: var(--accent); }
-    a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
-    .wrap { width: min(1080px, 100%); margin: 0 auto; padding: 0 24px; }
-    header .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-top: 20px; padding-bottom: 20px; }
-    .brand { display: flex; align-items: center; gap: 10px; color: var(--text); font-weight: 600; font-size: 19px; text-decoration: none; }
-    .brand img { width: 32px; height: 32px; }
-    header nav { display: flex; gap: 20px; }
-    header nav a { color: var(--muted); text-decoration: none; }
-    header nav a:hover { color: var(--text); }
-    .hero { padding: 56px 0 40px; text-align: center; }
-    h1 { margin: 0 auto 16px; max-width: 760px; font-size: clamp(36px, 6vw, 58px); line-height: 1.08; font-weight: 700; letter-spacing: -0.02em; }
-    .lede { margin: 0 auto 28px; max-width: 620px; color: var(--muted); font-size: 20px; }
-    .actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; }
-    .button { display: inline-block; padding: 13px 24px; border: 1px solid var(--line); border-radius: 6px; color: var(--text); font-weight: 600; text-decoration: none; }
-    .button:hover { background: var(--surface); }
-    .button.primary { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); }
-    .button.primary:hover { background: var(--accent-hover); }
-    .note { margin: 14px 0 0; color: var(--muted); font-size: 14px; }
-    .shot { display: block; width: 100%; height: auto; margin: 32px auto 0; border: 1px solid var(--line); border-radius: 8px; }
-    section { padding: 48px 0; border-top: 1px solid var(--line); }
-    h2 { margin: 0 0 24px; font-size: 30px; line-height: 1.2; letter-spacing: -0.01em; }
-    h3 { margin: 0 0 6px; font-size: 18px; }
-    .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin: 0; padding: 0; list-style: none; counter-reset: step; }
-    .steps li { counter-increment: step; }
-    .steps li::before { content: counter(step); display: grid; place-items: center; width: 32px; height: 32px; margin-bottom: 10px; border-radius: 50%; background: var(--accent); color: var(--accent-ink); font-weight: 700; }
-    .steps p, .plan p { margin: 0; color: var(--muted); }
-    .plans { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
-    .plan { display: flex; flex-direction: column; padding: 24px; background: var(--surface); border: 1px solid var(--line); border-radius: 8px; }
-    .plan.pro { border-color: var(--accent); }
-    .price { margin: 4px 0 14px; font-size: 32px; font-weight: 700; }
-    .price span { color: var(--muted); font-size: 16px; font-weight: 400; }
-    .plan ul { flex: 1; margin: 0 0 22px; padding-left: 20px; }
-    .plan li { margin-bottom: 6px; }
-    .plan .button { text-align: center; }
-    .faq h3 { margin-top: 24px; }
-    .faq h3:first-of-type { margin-top: 0; }
-    .faq p { margin: 0; max-width: 760px; color: var(--muted); }
-    footer { padding: 32px 0 48px; border-top: 1px solid var(--line); color: var(--muted); font-size: 14px; }
-    @media (max-width: 720px) {
-      header nav { display: none; }
-      .hero { padding-top: 28px; }
-      .lede { font-size: 18px; }
-      .steps, .plans { grid-template-columns: 1fr; }
-      .actions .button { width: 100%; text-align: center; }
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <a class="skip" href="#top">Skip to content</a>
   <header>
     <div class="wrap">
-      <a class="brand" href="#top"><img src="icon.png" alt="" width="32" height="32">Facet</a>
+      <a class="brand" href="#top"><img src="icon.png" alt="" width="32" height="32">Facet<span class="brand-by">by Prosper Technologies</span></a>
       <nav aria-label="Page sections">
         <a href="#how">How it works</a>
         <a href="#pricing">Pricing</a>
         <a href="#questions">Questions</a>
+        <a class="nav-download" href="https://github.com/ProsperTechnology/facet/releases/latest">Download ↗</a>
       </nav>
     </div>
   </header>
 
   <main id="top">
     <div class="wrap hero">
-      <h1>Make your photo better in one click</h1>
-      <p class="lede">Facet fixes light, color and sharpness for you, with no sliders to learn. It runs on your own Windows PC, so your photos stay with you.</p>
-      <div class="actions">
-        <a class="button primary" href="https://github.com/ProsperTechnology/facet/releases/latest/download/Facet-Setup-0.1.0.exe">Download free for Windows</a>
-        <a class="button" href="https://prospertechnology.gumroad.com/l/facet-pro">Get Facet Pro</a>
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="status-dot"></span> A little less editing. A lot more photo.</p>
+        <h1>Your photos.<br>Their <em>best light.</em></h1>
+        <p class="lede">Bring out what you love in every shot. Fix light, color and sharpness in one click, right on your Windows PC.</p>
+        <div class="actions">
+          <a class="button primary" href="https://github.com/ProsperTechnology/facet/releases/latest/download/Facet-Setup-0.1.0.exe">Download for Windows <span aria-hidden="true">↓</span></a>
+          <a class="text-link" href="#how">Meet Facet <span aria-hidden="true">↗</span></a>
+        </div>
+        <p class="note">Free to start · Windows 10 &amp; 11 · No account needed</p>
       </div>
-      <p class="note">Version 0.1.0 · 115 MB · Windows 10 or 11 · No account needed</p>
-      <img class="shot" src="facet-app.png" width="1400" height="860" alt="The Facet window, with an Auto Fix button at the top of a list of one-click fixes.">
+      <div class="hero-art" aria-label="Facet product preview">
+        <div class="art-heading"><span>THE EVERYDAY PHOTO EDITOR</span><span>01 / FACET</span></div>
+        <div class="preview-frame"><img class="shot" src="facet-app.png" width="1400" height="860" alt="Facet's Windows interface with Auto Fix, lighting, color and sharpening tools beside the photo workspace."></div>
+        <div class="art-caption"><span class="caption-mark" aria-hidden="true">✳</span><p>Less time at the controls.<br><strong>More room for your creativity.</strong></p><span class="local-badge">Made for your PC</span></div>
+      </div>
     </div>
+
+    <div class="trust-strip"><div class="wrap"><span>YOUR PHOTOS COME FIRST</span><p>Edited on your PC</p><p>No photo uploads</p><p>No watermarks</p><p>Your originals stay yours</p></div></div>
 
     <section id="how">
       <div class="wrap">
-        <h2>Three steps, no learning curve</h2>
+        <div class="section-heading"><p class="eyebrow">FROM ALMOST TO JUST RIGHT</p><h2>A good photo is<br>just a few clicks away.</h2><p class="section-intro">Start with a simple fix. Go deeper when you want to. Facet gives you room to do both.</p></div>
         <ol class="steps">
           <li><h3>Open a photo</h3><p>Drop it onto the window, or choose it from your PC.</p></li>
           <li><h3>Click a fix</h3><p>Start with Auto Fix. Hold Compare to see your original, and Undo if you prefer it.</p></li>
@@ -109,10 +64,10 @@
 
     <section id="pricing">
       <div class="wrap">
-        <h2>Free for everyday fixes</h2>
+        <div class="section-heading"><p class="eyebrow">KEEP IT SIMPLE. OR GO PRO.</p><h2>Your next great edit<br>starts here.</h2><p class="section-intro">Everyday essentials, free. Extra possibilities when you need them.</p></div>
         <div class="plans">
           <div class="plan">
-            <h3>Facet</h3>
+            <div class="plan-label">THE EVERYDAY ESSENTIALS</div><h3>Facet</h3>
             <div class="price">Free</div>
             <ul>
               <li>Auto Fix, plus Fix Lighting and Fix Color</li>
@@ -123,7 +78,7 @@
             <a class="button" href="https://github.com/ProsperTechnology/facet/releases/latest/download/Facet-Setup-0.1.0.exe">Download free</a>
           </div>
           <div class="plan pro">
-            <h3>Facet Pro</h3>
+            <div class="plan-label">A LITTLE MORE POSSIBILITY</div><h3>Facet Pro <span class="pill">PRO</span></h3>
             <div class="price">$1.99 <span>a month</span></div>
             <ul>
               <li>AI upscaling to 2× and 4× size</li>
@@ -139,23 +94,19 @@
 
     <section id="questions" class="faq">
       <div class="wrap">
-        <h2>Questions</h2>
-        <h3>Why does Windows show a warning when I install it?</h3>
-        <p>Facet isn't code-signed yet, so Windows SmartScreen may say it doesn't recognize the app. To continue, click More info, then Run anyway.</p>
-        <h3>Are my photos uploaded anywhere?</h3>
-        <p>No. Editing, including the AI tools, happens on your PC. If you subscribe, Facet contacts Gumroad to check your license key, and it sends only that key and the product ID.</p>
-        <h3>How do I activate Facet Pro?</h3>
-        <p>After you subscribe, Gumroad emails you a license key. Open Facet, click Free · Upgrade at the bottom right of the window, then enter the key and click Activate.</p>
-        <h3>How do I cancel?</h3>
-        <p>Use the Manage membership link in your Gumroad receipt email.</p>
-        <h3>Does upscaling need a powerful PC?</h3>
-        <p>No, but a graphics card makes it much faster. Without one, Facet uses your processor, and large photos can take several minutes.</p>
+        <p class="eyebrow">GOOD TO KNOW</p><h2>A few things you<br>might be wondering.</h2>
+        <details><summary>Why does Windows show a warning when I install it?</summary><p>Facet isn't code-signed yet, so Windows SmartScreen may say it doesn't recognize the app. Check that you downloaded the installer from the official Facet GitHub releases page before deciding whether to proceed.</p></details>
+        <details><summary>Are my photos uploaded anywhere?</summary><p>No. Editing, including the AI tools, happens on your PC. If you subscribe, Facet contacts Gumroad to check your license key, and it sends only that key and the product ID.</p></details>
+        <details><summary>How do I activate Facet Pro?</summary><p>After you subscribe, Gumroad emails you a license key. Open Facet, click Free · Upgrade at the bottom right of the window, then enter the key and click Activate.</p></details>
+        <details><summary>How do I cancel?</summary><p>Use the Manage membership link in your Gumroad receipt email.</p></details>
+        <details><summary>Does upscaling need a powerful PC?</summary><p>No, but a graphics card makes it much faster. Without one, Facet uses your processor, and large photos can take several minutes.</p></details>
       </div>
     </section>
   </main>
 
   <footer>
-    <div class="wrap">Facet is built with Electron, ag-psd and ONNX Runtime Web (MIT), the U²-Netp model (Apache-2.0) and the Real-ESRGAN General x4v3 model (BSD-3-Clause, © 2021 Xintao Wang). Payments and subscriptions are handled by Gumroad. <a href="privacy.html">Privacy policy</a></div>
+    <div class="wrap footer-top"><a class="brand" href="#top"><img src="icon.png" width="32" height="32" alt="">Facet</a><p>Photo editing, beautifully simple.</p><a href="https://github.com/ProsperTechnology/facet">GitHub ↗</a><a href="privacy.html">Privacy</a></div>
+    <div class="wrap credits"><p>© 2026 Prosper Technologies. Facet for Windows.</p>Facet is built with Electron, ag-psd and ONNX Runtime Web (MIT), the U²-Netp model (Apache-2.0) and the Real-ESRGAN General x4v3 model (BSD-3-Clause, © 2021 Xintao Wang). Payments and subscriptions are handled by Gumroad. <a href="privacy.html">Privacy policy</a></div>
   </footer>
 </body>
 </html>
